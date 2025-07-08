@@ -1,0 +1,477 @@
+// Responsive design styles
+
+// Mobile first approach - base styles are for mobile
+
+// Small devices (landscape phones, 480px and up)
+@media (min-width: map-get($breakpoints, xs)) {
+  .container {
+    padding: 0 map-get($spacers, 4);
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: map-get($breakpoints, sm)) {
+  // Navigation
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-toggle {
+    display: flex;
+  }
+  
+  // Hero section
+  .hero {
+    padding: 60px 0;
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .location {
+      font-size: $font-size-base;
+    }
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: map-get($spacers, 2);
+  }
+  
+  // Sections
+  section {
+    padding: (map-get($spacers, 7)) 0;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: map-get($spacers, 5);
+  }
+  
+  // Stats grid
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: map-get($spacers, 3);
+    margin: map-get($spacers, 5) 0;
+  }
+  
+  // Skills grid
+  .skills-grid, .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 3);
+  }
+  
+  .skills-showcase {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 3);
+  }
+  
+  // Experience
+  .experience-preview {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 3);
+  }
+  
+  .timeline-item {
+    margin-left: map-get($spacers, 3);
+    padding: map-get($spacers, 3);
+    
+    &::before {
+      left: -#{map-get($spacers, 3)};
+      top: map-get($spacers, 3);
+    }
+  }
+  
+  // Contact
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 3);
+  }
+  
+  .contact-form {
+    padding: map-get($spacers, 4);
+  }
+  
+  // Footer
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 4);
+    text-align: center;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: map-get($spacers, 2);
+    text-align: center;
+  }
+  
+  // About content
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 4);
+    text-align: center;
+  }
+  
+  // Intro actions
+  .intro-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: map-get($spacers, 2);
+  }
+  
+  // Profile card adjustments
+  .profile-card {
+    padding: map-get($spacers, 3);
+  }
+  
+  // Button adjustments
+  .btn {
+    padding: 10px 24px;
+    font-size: $font-size-sm;
+  }
+  
+  // Tech stack adjustments
+  .tech-stack {
+    padding: map-get($spacers, 2);
+    font-size: $font-size-xs;
+  }
+  
+  // Achievement items
+  .achievement-item {
+    padding-left: map-get($spacers, 3);
+    font-size: $font-size-xs;
+  }
+}
+
+// Large tablets and small desktops
+@media (min-width: map-get($breakpoints, sm)) and (max-width: map-get($breakpoints, md)) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .experience-preview {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Large devices (desktops, 1024px and up)
+@media (min-width: map-get($breakpoints, md)) {
+  .container {
+    padding: 0 map-get($spacers, 5);
+  }
+  
+  // Navigation menu shown
+  .nav-toggle {
+    display: none;
+  }
+  
+  .nav-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    background: transparent;
+    flex-direction: row;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  .nav-links {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+  
+  // Multi-column layouts
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .certifications-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .contact-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  // About content side by side
+  .about-content {
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+  }
+  
+  .intro-actions {
+    flex-direction: row;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: map-get($breakpoints, lg)) {
+  .container {
+    padding: 0 map-get($spacers, 6);
+  }
+  
+  // Larger spacing for bigger screens
+  section {
+    padding: (map-get($spacers, 8)) 0;
+  }
+  
+  .hero {
+    padding: 120px 0;
+  }
+  
+  // More columns for larger screens
+  .certifications-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .contact-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  // Larger font sizes
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 3rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.75rem;
+  }
+  
+  .hero .location {
+    font-size: 1.25rem;
+  }
+}
+
+// Ultra wide screens (1400px and up)
+@media (min-width: map-get($breakpoints, xl)) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  // Even more spacing for ultra-wide screens
+  section {
+    padding: (map-get($spacers, 8) * 1.5) 0;
+  }
+  
+  .hero {
+    padding: 150px 0;
+  }
+  
+  // Maximum columns for certification grid
+  .certifications-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+// Print styles
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  .site-header,
+  .site-footer,
+  .nav-toggle,
+  .cta-buttons,
+  .contact-form {
+    display: none !important;
+  }
+  
+  #main-content {
+    margin-top: 0;
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+  
+  section {
+    padding: 20px 0;
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  .timeline-item,
+  .cert-card,
+  .skill-category {
+    page-break-inside: avoid;
+    margin-bottom: 15px;
+  }
+  
+  // Simplify for print
+  .card {
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+  
+  .btn {
+    border: 1px solid #333;
+    padding: 5px 10px;
+  }
+  
+  // Show URLs for links
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+  
+  // Hide decorative elements
+  .skill-tag {
+    border: 1px solid #333;
+    background: transparent;
+    color: black;
+  }
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #000;
+    --secondary-color: #000;
+    --text-dark: #000;
+    --text-light: #000;
+    --border-color: #000;
+  }
+  
+  .btn {
+    border: 2px solid #000;
+  }
+  
+  .card {
+    border: 2px solid #000;
+  }
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .hover-lift:hover {
+    transform: none;
+  }
+  
+  .hover-scale:hover {
+    transform: none;
+  }
+}
+
+// Dark mode (if implemented)
+@media (prefers-color-scheme: dark) {
+  // This can be expanded if you want to add dark mode support
+  // For now, keeping the existing light theme
+}
+
+// Landscape orientation adjustments
+@media (orientation: landscape) and (max-height: 600px) {
+  .hero {
+    padding: 40px 0;
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+}
+
+// Specific device adjustments
+// iPhone SE and similar small screens
+@media only screen and (max-width: 375px) {
+  .container {
+    padding: 0 map-get($spacers, 2);
+  }
+  
+  .hero {
+    padding: 40px 0;
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 2);
+  }
+  
+  .btn {
+    padding: 8px 20px;
+    font-size: $font-size-sm;
+  }
+  
+  .contact-form {
+    padding: map-get($spacers, 3);
+  }
+  
+  .timeline-item {
+    padding: map-get($spacers, 2);
+    margin-left: map-get($spacers, 2);
+    
+    &::before {
+      left: -#{map-get($spacers, 2)};
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+// iPad and similar tablet adjustments
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .experience-preview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .certifications-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

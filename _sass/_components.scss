@@ -1,0 +1,458 @@
+// Component styles
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: $border-radius-pill;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  text-align: center;
+  transition: $transition-base;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: $font-size-base;
+  line-height: 1.4;
+  
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+}
+
+.btn-primary {
+  background: $card-gradient;
+  color: $white;
+  
+  &:hover {
+    color: $white;
+    box-shadow: 0 10px 30px rgba($primary-color, 0.3);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover {
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $white;
+  border-color: $white;
+  
+  &:hover {
+    background: $white;
+    color: $primary-color;
+  }
+}
+
+.cta-button {
+  @extend .btn;
+  @extend .btn-primary;
+  
+  &.secondary {
+    @extend .btn-outline;
+  }
+}
+
+// Cards
+.card {
+  background: $white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+  transition: $transition-base;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.card-body {
+  padding: map-get($spacers, 4);
+}
+
+.card-title {
+  margin-bottom: map-get($spacers, 3);
+  color: $primary-color;
+}
+
+// Stats cards
+.stat-card {
+  @extend .card;
+  text-align: center;
+  padding: map-get($spacers, 4);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: $font-weight-bold;
+  color: $primary-color;
+  display: block;
+  line-height: 1;
+  margin-bottom: map-get($spacers, 2);
+}
+
+.stat-label {
+  color: $text-light;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Skill components
+.skill-category {
+  @extend .card;
+  padding: map-get($spacers, 4);
+  
+  h3 {
+    text-align: center;
+    margin-bottom: map-get($spacers, 3);
+  }
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: map-get($spacers, 2);
+}
+
+.skill-tag {
+  background: $card-gradient;
+  color: $white;
+  padding: map-get($spacers, 1) map-get($spacers, 3);
+  border-radius: $border-radius-pill;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  transition: $transition-base;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-sm;
+  }
+}
+
+.skills-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: map-get($spacers, 4);
+  margin: map-get($spacers, 5) 0;
+}
+
+.skill-group {
+  text-align: center;
+  
+  h3 {
+    margin-bottom: map-get($spacers, 3);
+    color: $primary-color;
+  }
+}
+
+// Experience components
+.experience-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: map-get($spacers, 4);
+  margin: map-get($spacers, 5) 0;
+}
+
+.experience-card {
+  @extend .card;
+  padding: map-get($spacers, 4);
+  
+  h3 {
+    margin-bottom: map-get($spacers, 2);
+  }
+}
+
+.timeline-item {
+  @extend .card;
+  padding: map-get($spacers, 4);
+  margin: map-get($spacers, 4) 0 map-get($spacers, 4) map-get($spacers, 4);
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: -#{map-get($spacers, 4)};
+    top: map-get($spacers, 4);
+    width: 12px;
+    height: 12px;
+    background: $primary-color;
+    border-radius: 50%;
+    border: 3px solid $white;
+    box-shadow: 0 0 0 3px $primary-color;
+  }
+  
+  @media (max-width: map-get($breakpoints, sm)) {
+    margin-left: map-get($spacers, 3);
+    
+    &::before {
+      left: -#{map-get($spacers, 3)};
+    }
+  }
+  
+  h3 {
+    margin-bottom: map-get($spacers, 2);
+  }
+}
+
+.company {
+  font-weight: $font-weight-semibold;
+  color: $text-dark;
+  margin-bottom: map-get($spacers, 1);
+}
+
+.date {
+  color: $text-muted;
+  font-style: italic;
+  font-size: $font-size-sm;
+  margin-bottom: map-get($spacers, 3);
+}
+
+.tech-stack {
+  background: $light-gray;
+  padding: map-get($spacers, 3);
+  border-radius: $border-radius;
+  margin: map-get($spacers, 3) 0;
+  font-size: $font-size-sm;
+  
+  strong {
+    color: $text-dark;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+.achievements {
+  margin-top: map-get($spacers, 3);
+}
+
+.achievement-item {
+  margin: map-get($spacers, 2) 0;
+  padding-left: map-get($spacers, 4);
+  position: relative;
+  font-size: $font-size-sm;
+  line-height: 1.6;
+  
+  &::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $primary-color;
+    font-weight: $font-weight-bold;
+    font-size: 1rem;
+  }
+}
+
+// Certification cards
+.cert-card {
+  @extend .card;
+  padding: map-get($spacers, 4);
+  text-align: center;
+  
+  h4 {
+    margin-bottom: map-get($spacers, 2);
+    font-size: $font-size-base;
+  }
+}
+
+.cert-issuer {
+  color: $text-light;
+  font-size: $font-size-sm;
+}
+
+// Contact components
+.contact-section {
+  text-align: center;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: map-get($spacers, 4);
+  margin: map-get($spacers, 6) 0;
+}
+
+.contact-item {
+  @extend .card;
+  padding: map-get($spacers, 4);
+  text-align: center;
+  
+  h3 {
+    margin-bottom: map-get($spacers, 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: map-get($spacers, 2);
+  }
+  
+  a {
+    color: $text-dark;
+    font-weight: $font-weight-medium;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.contact-form {
+  @extend .card;
+  padding: map-get($spacers, 6);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: map-get($spacers, 4);
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: map-get($spacers, 2);
+  color: $text-dark;
+  font-weight: $font-weight-medium;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  font-size: $font-size-base;
+  font-family: inherit;
+  transition: $transition-base;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
+  
+  &::placeholder {
+    color: $text-muted;
+  }
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+// Profile card
+.profile-card {
+  @extend .card;
+  padding: map-get($spacers, 4);
+  text-align: center;
+  
+  .profile-info {
+    margin-top: map-get($spacers, 3);
+    
+    h3 {
+      margin-bottom: map-get($spacers, 3);
+    }
+    
+    p {
+      margin-bottom: map-get($spacers, 2);
+      font-size: $font-size-sm;
+      
+      strong {
+        color: $text-dark;
+      }
+    }
+    
+    a {
+      color: $primary-color;
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+// Content sections
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  
+  h2 {
+    margin-bottom: map-get($spacers, 4);
+  }
+  
+  .lead {
+    margin-bottom: map-get($spacers, 4);
+  }
+}
+
+.intro-actions {
+  display: flex;
+  gap: map-get($spacers, 3);
+  justify-content: center;
+  margin-top: map-get($spacers, 5);
+  
+  @media (max-width: map-get($breakpoints, sm)) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// Loading states
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid $primary-color;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Alerts
+.alert {
+  padding: map-get($spacers, 3) map-get($spacers, 4);
+  border-radius: $border-radius;
+  margin-bottom: map-get($spacers, 4);
+  
+  &.alert-success {
+    background: lighten(green, 45%);
+    color: darken(green, 20%);
+    border: 1px solid lighten(green, 20%);
+  }
+  
+  &.alert-error {
+    background: lighten(red, 45%);
+    color: darken(red, 20%);
+    border: 1px solid lighten(red, 20%);
+  }
+}
