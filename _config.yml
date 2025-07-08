@@ -1,0 +1,100 @@
+# Site settings
+title: Si Thu Hlaing
+subtitle: Principal Consultant & Full Stack Developer
+description: >-
+  Experienced Software Architect and Full-Stack Developer with 16+ years 
+  of expertise in designing scalable, high-performance systems. Based in Germany.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://sithu-hlaing.github.io" # the base hostname & protocol for your site
+
+# Personal information
+author:
+  name: Si Thu Hlaing
+  title: Principal Consultant & Full Stack Developer
+  location: Germany
+  email: lukephew@gmail.com
+  phone: "+49 15213691167"
+  linkedin: sithu-hlaing
+  github: sithuhlaing
+  experience_years: 16
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+  experience:
+    output: false
+  skills:
+    output: false
+  certifications:
+    output: false
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+
+# Site navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Experience
+    url: /experience/
+  - title: Skills
+    url: /skills/
+  - title: Projects
+    url: /projects/
+  - title: Blog
+    url: /blog/
+  - title: Contact
+    url: /contact/
+
+# Social media and contact
+social:
+  email: lukephew@gmail.com
+  linkedin: https://linkedin.com/in/sithu-hlaing
+  github: https://github.com/sithuhlaing
+  phone: "+49 15213691167"
+
+# Analytics (optional)
+google_analytics: # Add your GA tracking ID
+
+# SEO settings
+lang: en
+timezone: Europe/Berlin
+
+# Jekyll SEO tag settings
+seo:
+  type: Person
+  name: Si Thu Hlaing
+  links:
+    - https://linkedin.com/in/sithu-hlaing
+    - https://github.com/sithuhlaing

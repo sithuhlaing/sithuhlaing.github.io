@@ -1,0 +1,190 @@
+- title: "Career Break"
+  company: "Personal Development & Skill Enhancement"
+  location: "Germany"
+  start_date: "Oct 2024"
+  end_date: "Present"
+  current: true
+  summary: "Taking a strategic break to focus on emerging technologies, personal projects, and exploring new opportunities in the German tech market."
+  technologies: []
+  achievements: []
+
+- title: "Principal Consultant"
+  company: "UOB Singapore - The Optimum Solutions"
+  location: "Singapore"
+  start_date: "Jul 2023"
+  end_date: "Sep 2024"
+  summary: "Led migration projects and developed high-performance applications with modern web technologies."
+  technologies:
+    - VueJS
+    - React
+    - TypeScript
+    - TypeORM
+    - RESTful APIs
+    - Git
+    - Jenkins
+    - Docker
+    - MongoDB
+    - MariaDB
+    - Agile
+    - Microservices
+  achievements:
+    - "Led migration from VueJS to ReactJS, improving code maintainability and boosting performance by 30%"
+    - "Developed UI/UX components with HTML5 & SVG, increasing user engagement by 25%"
+    - "Designed and implemented a Release Calendar App to streamline software release management"
+    - "Achieved 70% unit test coverage using Jest, improving reliability and reducing defects"
+    - "Built a data manipulation interface with advanced sorting and drag-and-drop features"
+
+- title: "Senior Application Consultant"
+  company: "UOB Singapore - People Profilers"
+  location: "Singapore"
+  start_date: "May 2022"
+  end_date: "Jul 2023"
+  summary: "Optimized database systems and automated internal processes for improved efficiency."
+  technologies:
+    - TypeScript
+    - TypeORM
+    - MongoDB
+    - MariaDB
+    - Docker
+  achievements:
+    - "Migrated database from MongoDB to MariaDB, optimizing efficiency with TypeORM"
+    - "Refactored batch jobs in TypeScript, improving execution speed by 3x"
+    - "Automated internal processes using Docker, increasing operational efficiency"
+    - "Developed a timesheet tracking & reminder system, improving compliance"
+
+- title: "Senior Java Developer"
+  company: "Land Transport Authority (LTA) - Singapore"
+  employer: "Troy Tech"
+  location: "Singapore"
+  start_date: "Mar 2021"
+  end_date: "May 2022"
+  summary: "Developed mission-critical applications for Singapore's transport infrastructure using enterprise Java technologies."
+  technologies:
+    - Java
+    - J2EE
+    - SQL
+    - ExtendJS
+    - Messaging MQ
+    - JSON
+    - Object-Oriented Design
+    - UML
+    - IBM WebSphere
+    - IBM DB2
+    - LDAP
+    - IBM MQ
+  achievements:
+    - "Developed mission-critical applications on IBM WebSphere, ensuring high availability & performance"
+    - "Optimized data transformation on IBM DB2, improving accuracy & integrity"
+    - "Implemented secure authentication & access management using LDAP"
+    - "Integrated IBM MQ for distributed task management, enhancing system efficiency"
+
+- title: "Senior Backend Developer"
+  company: "Allianz Technology"
+  location: "Thailand"
+  start_date: "Sep 2020"
+  end_date: "Mar 2021"
+  summary: "Built backend-for-frontend solutions for insurance sector applications using Kotlin."
+  technologies:
+    - Kotlin
+    - RESTful APIs
+    - Agile
+    - Full Stack Testing
+    - Code Review
+  achievements:
+    - "Built a Kotlin-based Backend-for-Frontend (BFF) for optimized API communication"
+    - "Enhanced API performance, improving data accuracy & reducing processing times"
+    - "Implemented core system compliance modifications for the insurance sector"
+
+- title: "Senior Software Developer"
+  company: "ATA IT (National Bank of Canada)"
+  location: "Thailand"
+  start_date: "Feb 2019"
+  end_date: "Mar 2020"
+  summary: "Developed and maintained banking software solutions with focus on security and performance optimization."
+  technologies:
+    - Java
+    - Spring Framework
+    - SQL
+    - Banking APIs
+  achievements:
+    - "Developed secure banking applications with stringent compliance requirements"
+    - "Optimized application performance for high-volume financial transactions"
+
+- title: "Senior Full Stack Developer"
+  company: "SmartSoftAsia"
+  location: "Thailand"
+  start_date: "May 2018"
+  end_date: "Dec 2018"
+  summary: "Led full-stack development projects, architecting scalable solutions and mentoring development teams."
+  technologies:
+    - Java
+    - Spring Boot
+    - JavaScript
+    - React
+    - MySQL
+  achievements:
+    - "Architected and developed enterprise-level web applications"
+    - "Led development teams and established coding standards"
+    - "Mentored junior developers in full-stack technologies"
+
+- title: "Game Programming Supervisor"
+  company: "RingZero Com (Ring Zero Game Studio)"
+  location: "Thailand"
+  start_date: "Jul 2016"
+  end_date: "Apr 2018"
+  summary: "Supervised game development projects, managed programming teams, and implemented game mechanics and systems."
+  technologies:
+    - C#
+    - Unity
+    - Game Development
+    - Team Management
+  achievements:
+    - "Led development of multiple mobile and web games"
+    - "Managed cross-functional development teams"
+    - "Implemented game mechanics and optimization strategies"
+
+- title: "Software Developer"
+  company: "Wiwaa Co. Ltd"
+  location: "Myanmar"
+  start_date: "Jul 2015"
+  end_date: "Feb 2016"
+  summary: "Developed and maintained software applications, focusing on design, documentation, coding, and code review processes."
+  technologies:
+    - Java
+    - PHP
+    - MySQL
+    - JavaScript
+  achievements:
+    - "Developed web applications with focus on user experience"
+    - "Implemented code review processes improving code quality"
+
+- title: "Project Leader"
+  company: "Tech Fun (Myanmar) Co. Ltd"
+  location: "Myanmar"
+  start_date: "Dec 2014"
+  end_date: "Jun 2015"
+  summary: "Led development teams, managed project timelines, and ensured delivery of quality software solutions."
+  technologies:
+    - Project Management
+    - Team Leadership
+    - Software Development
+  achievements:
+    - "Successfully managed multiple software development projects"
+    - "Coordinated with clients and stakeholders for requirement gathering"
+    - "Delivered projects on time and within budget"
+
+- title: "System Analyst / Senior Developer"
+  company: "Frontier Technology Partners"
+  location: "Myanmar"
+  start_date: "Mar 2013"
+  end_date: "Nov 2014"
+  summary: "Analyzed system requirements, designed technical solutions, and developed applications."
+  technologies:
+    - System Analysis
+    - Java
+    - Database Design
+    - Software Architecture
+  achievements:
+    - "Analyzed complex business requirements and translated them into technical specifications"
+    - "Designed and implemented scalable software solutions"
+    - "Collaborated with cross-functional teams for system integration"

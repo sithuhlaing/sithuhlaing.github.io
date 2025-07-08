@@ -1,0 +1,174 @@
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-dark;
+  background: $primary-gradient;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  line-height: $line-height-heading;
+  font-weight: $font-weight-bold;
+  margin-bottom: map-get($spacers, 3);
+  color: $text-dark;
+}
+
+h1 {
+  font-size: 3.5rem;
+  
+  @media (max-width: map-get($breakpoints, sm)) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: map-get($spacers, 6);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: $card-gradient;
+  }
+  
+  @media (max-width: map-get($breakpoints, sm)) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: $primary-color;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: map-get($spacers, 3);
+}
+
+.lead {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  line-height: 1.8;
+}
+
+// Links
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: $transition-base;
+  
+  &:hover, &:focus {
+    color: darken($primary-color, 10%);
+    text-decoration: underline;
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Lists
+ul, ol {
+  margin-bottom: map-get($spacers, 3);
+  padding-left: map-get($spacers, 4);
+}
+
+li {
+  margin-bottom: map-get($spacers, 1);
+}
+
+// Code
+code {
+  font-family: $font-family-mono;
+  font-size: 0.9em;
+  background: lighten($light-gray, 2%);
+  padding: 0.2em 0.4em;
+  border-radius: $border-radius-sm;
+}
+
+pre {
+  font-family: $font-family-mono;
+  background: $light-gray;
+  padding: map-get($spacers, 3);
+  border-radius: $border-radius;
+  overflow-x: auto;
+  margin-bottom: map-get($spacers, 3);
+  
+  code {
+    background: none;
+    padding: 0;
+  }
+}
+
+// Tables
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: map-get($spacers, 3);
+}
+
+th, td {
+  padding: map-get($spacers, 2);
+  text-align: left;
+  border-bottom: 1px solid $border-color;
+}
+
+th {
+  font-weight: $font-weight-semibold;
+  background: $light-gray;
+}
+
+// Forms
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+// Accessibility
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Focus styles
+*:focus {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}
