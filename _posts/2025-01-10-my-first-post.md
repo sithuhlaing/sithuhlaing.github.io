@@ -1,14 +1,3 @@
----
-layout: post
-title: "Welcome to My Technical Blog"
-date: 2025-01-10 10:00:00 +0100
-categories: [Personal, Technology]
-tags: [Welcome, Introduction, Career]
-author: Si Thu Hlaing
-excerpt: "An introduction to my technical blog where I'll share insights from 16+ years of software development experience."
-image: /images/blog/welcome-post.jpg
----
-
 # Welcome to My Technical Blog
 
 Hello and welcome! I'm excited to launch this technical blog where I'll be sharing insights, experiences, and lessons learned from my 16+ years in software development.
